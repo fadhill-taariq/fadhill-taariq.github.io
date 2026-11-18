@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tetris Webpage — Fadhil Taariq</title>
+  <meta name="description" content="A browser-based Tetris built from scratch in vanilla JavaScript." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..600;1,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Fadhil&nbsp;Taariq</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://github.com/fadhill-taariq" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="wrap">
+        <a class="back" href="../index.html#work">← Back to all projects</a>
+        <div class="meta">
+          <span class="pill">02 / 05</span>
+          <span>JavaScript · HTML · CSS</span>
+          <span>Browser game</span>
+        </div>
+        <h1>Tetris Webpage</h1>
+        <p class="lede">
+          A browser-based take on the classic falling-block puzzle, built from
+          scratch in vanilla JavaScript. No frameworks, no game engine — just a
+          grid, a game loop, and a few carefully tuned rules to capture the feel of Tetris in its purest form.
+        </p>
+        <div class="btn-row">
+          <a class="btn primary" href="https://github.com/fadhill-taariq/TetrisWebpage" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap project-body">
+        <aside>
+          <h4>Stack</h4>
+          <ul>
+            <li>Vanilla JavaScript</li>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>No external dependencies</li>
+          </ul>
+          <h4>Role</h4>
+          <ul>
+            <li>Sole developer</li>
+            <li>Design &amp; engineering</li>
+          </ul>
+          <h4>Scope</h4>
+          <ul>
+            <li>One self-contained webpage</li>
+          </ul>
+        </aside>
+
+        <div class="content">
+
+          <h2>The build</h2>
+          <p>
+            The game lives entirely in one webpage. A grid of cells holds the playfield;
+            a game loop drops the active piece on a tick that speeds up with the player's
+            level; keyboard input rotates and shifts pieces while collision rules keep
+            them inside the well. Cleared lines update the score and bump the level. The
+            visuals stay deliberately simple so the timing and feel are what carries the
+            experience.
+          </p>
+
+          <h2>What I learned</h2>
+
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="label">JavaScript</div>
+              <div class="title">Vanilla JS, end-to-end</div>
+              <p>Building a non-trivial interactive program without reaching for a framework.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Architecture</div>
+              <div class="title">The game loop</div>
+              <p>Separating update, render, and input — the pattern that quietly underpins every game.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Algorithms</div>
+              <div class="title">Grid math &amp; rotation</div>
+              <p>Representing pieces, rotating them around the right pivot, and detecting line clears.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Collision</div>
+              <div class="title">Boundary &amp; piece checks</div>
+              <p>Stopping pieces from leaving the well or overlapping the stack — the rules everyone forgets to handle.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Input</div>
+              <div class="title">Keyboard handling</div>
+              <p>Translating key events into smooth, responsive piece movement.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">DOM</div>
+              <div class="title">Rendering without a canvas</div>
+              <p>Updating the playfield through the DOM as a forcing function for thinking about performance.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">UX</div>
+              <div class="title">Game feel</div>
+              <p>The hidden craft of tuning drop speed, level curve, and clear animations so the game feels right.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Discipline</div>
+              <div class="title">Scope control</div>
+              <p>Knowing when "Tetris, but…" stops and "Tetris, finished" begins.</p>
+            </div>
+          </div>
+
+          <h2>What I'd do next</h2>
+          <ul>
+            <li>Hold piece, ghost piece, and a more forgiving lock delay.</li>
+            <li>A canvas-based renderer for smoother piece movement and effects.</li>
+            <li>Local high scores and a daily seeded mode for replayability.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Fadhil Taariq</span>
+      <span><a href="../index.html#work">All projects →</a></span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Business Essay Website — Fadhil Taariq</title>
+  <meta name="description" content="A Django site presenting an academic essay on American business history across multiple pages." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..600;1,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Fadhil&nbsp;Taariq</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://github.com/fadhill-taariq" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="wrap">
+        <a class="back" href="../index.html#work">← Back to all projects</a>
+        <div class="meta">
+          <span class="pill">04 / 05</span>
+          <span>Django · Python · HTML</span>
+          <span>Academic web publication</span>
+        </div>
+        <h1>Business Essay Website</h1>
+        <p class="lede">
+          A Django-powered multi-page site that presents an academic essay on
+          American business history as a small, calm web publication — closer to
+          a long-form article than a coursework submission.
+        </p>
+        <div class="btn-row">
+          <a class="btn primary" href="https://github.com/fadhill-taariq/BusinessEssayWebsite" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap project-body">
+        <aside>
+          <h4>Stack</h4>
+          <ul>
+            <li>Django</li>
+            <li>Python</li>
+            <li>HTML / Django templates</li>
+            <li>CSS</li>
+          </ul>
+          <h4>Topics</h4>
+          <ul>
+            <li>American history</li>
+            <li>Business history</li>
+            <li>Web publishing</li>
+          </ul>
+          <h4>Role</h4>
+          <ul>
+            <li>Author &amp; developer</li>
+          </ul>
+        </aside>
+
+        <div class="content">
+          <h2>The brief</h2>
+          <p>
+            A coursework essay deserves more than a single PDF. I wanted to publish my
+            Business History essay the way I'd want to read it: broken into chapters,
+            paced for screens, easy to navigate, and quietly typeset. Django gave me
+            the structure to do that without overcomplicating things.
+          </p>
+
+          <h2>The build</h2>
+          <p>
+            Django handles routing between essay sections; templates provide a shared
+            layout so every page feels like the same publication; static files keep the
+            typography and spacing consistent. The result is a small site where the
+            essay reads naturally on any screen and the structure of the argument is
+            visible from the menu.
+          </p>
+
+          <h2>What I learned</h2>
+
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="label">Django</div>
+              <div class="title">Models, views, templates</div>
+              <p>Wiring up the classic MVT pattern in a real, deployable project.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Routing</div>
+              <div class="title">URL design</div>
+              <p>Designing URLs that read like a table of contents instead of route IDs.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Templating</div>
+              <div class="title">Inheritance &amp; reuse</div>
+              <p>Using base templates and blocks to keep every page consistent without copy-paste.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Static files</div>
+              <div class="title">Assets in Django</div>
+              <p>Wiring up CSS and static assets the Django way — and remembering to collect them.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Information design</div>
+              <div class="title">Structuring a long read</div>
+              <p>Turning a single long document into a navigable, paced series of pages.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Typography</div>
+              <div class="title">Reading on screens</div>
+              <p>Measure, leading, and spacing — the small choices that make text feel like a publication.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Project setup</div>
+              <div class="title">Settings &amp; environments</div>
+              <p>Configuring a Django project for development and being deploy-ready.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Cross-discipline</div>
+              <div class="title">Writing meets web</div>
+              <p>Treating an essay and its presentation as one project, not two.</p>
+            </div>
+          </div>
+
+          <h2>What I'd do next</h2>
+          <ul>
+            <li>Add a reading-progress indicator and persistent table of contents.</li>
+            <li>Convert the essay into Markdown sources rendered through Django for easier editing.</li>
+            <li>Footnote system with hover previews instead of jumps.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Fadhil Taariq</span>
+      <span><a href="../index.html#work">All projects →</a></span>
+    </div>
+  </footer>
+</body>
+</html>
