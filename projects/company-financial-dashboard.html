@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company Financial Dashboard — Fadhil Taariq</title>
+  <meta name="description" content="A Flask dashboard that shows key figures, a price chart and news for any listed company, built on a modular, swappable data-provider layer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..600;1,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="../index.html" class="brand">Fadhil&nbsp;Taariq</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://github.com/fadhill-taariq" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="wrap">
+        <a href="../index.html#work" class="back">← Back to all projects</a>
+        <div class="meta">
+          <span class="pill">07 / 07</span>
+          <span>Python · Flask · APIs · Data dashboards</span>
+          <span>Personal finance information tool</span>
+        </div>
+        <h1>Company Financial Dashboard</h1>
+        <p class="lede">
+          A Flask dashboard that shows key figures, a 90-day price chart and news for any listed company. Type a name or ticker, such as <em>NVIDIA</em> or <em>NVDA</em>, and the whole page switches to that company.
+        </p>
+        <div class="btn-row">
+          <a class="btn primary" href="https://github.com/fadhill-taariq/Company-Financial-Dashboard" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap project-body">
+        <aside>
+          <h4>Stack</h4>
+          <ul>
+            <li>Python &amp; Flask</li>
+            <li>Finnhub, Alpha Vantage &amp; NewsAPI</li>
+            <li>Jinja templates &amp; Bootstrap</li>
+            <li>Hand-drawn SVG charts</li>
+            <li>pytest</li>
+          </ul>
+          <h4>Role</h4>
+          <ul>
+            <li>Sole developer</li>
+            <li>Design &amp; engineering</li>
+          </ul>
+          <h4>Status</h4>
+          <ul>
+            <li>Active project</li>
+          </ul>
+        </aside>
+
+        <div class="content">
+          <img src="../assets/company-financial-dashboard.png" alt="The dashboard showing NVIDIA sample data: key figures, a 90-day price chart and two news panels" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid rgba(127,127,127,.25);border-radius:8px;margin:0 0 .5rem;" />
+          <p class="dim"><small>Shown with the bundled sample data (illustrative figures, not real market data).</small></p>
+
+          <h2>What it is</h2>
+          <p>
+            A rebuild of my <a href="covid-dashboard.html">Covid-19 Personalised Dashboard</a>, with a company in place of the local area and a market benchmark in place of the nation. It brings together a company's price and day change, valuation and return figures, how it compares with the S&amp;P 500, a price chart, recent stories about the company and general market headlines.
+          </p>
+
+          <h2>The build</h2>
+          <p>
+            The main addition is a modular provider layer. Every data source (Finnhub, Alpha Vantage, NewsAPI and a bundled sample set) sits behind the same small interface, so each role, from quotes and price history to company and market news, can be pointed at a different provider in <code>config.json</code> without touching the rest of the app.
+          </p>
+          <p>
+            Answers are cached, and data is only fetched at startup, on a company switch, a manual refresh or a scheduled update, which keeps it within free-tier limits. If live data can't be fetched, the dashboard falls back to sample data for NVIDIA and labels it clearly. Updates can be scheduled for a time of day, once or daily, and the whole app is covered by a pytest suite that runs without network access or API keys.
+          </p>
+
+          <h2>What I learned</h2>
+
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="label">Architecture</div>
+              <div class="title">Designing for swappable parts</div>
+              <p>Defining one provider interface so new data sources can be added without changing the app around them.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">APIs &amp; data</div>
+              <div class="title">Normalising several APIs</div>
+              <p>Turning differently shaped responses from three services into one consistent internal format.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Resilience</div>
+              <div class="title">Working within rate limits</div>
+              <p>Caching, fetching only when needed and falling back to sample data when a source is unavailable.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Testing</div>
+              <div class="title">Testing without the network</div>
+              <p>Using fake HTTP sessions and a simulated clock so providers and the scheduler can be tested reliably.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Visualisation</div>
+              <div class="title">Charts without a library</div>
+              <p>Drawing the price chart as plain SVG, with a hover readout and a table view for accessibility.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Refactoring</div>
+              <div class="title">Growing an old project</div>
+              <p>Taking university coursework and reshaping it into a cleaner, more general application.</p>
+            </div>
+          </div>
+
+          <h2>What I'd do next</h2>
+          <ul>
+            <li>Store scheduled updates and dismissed articles so they survive a restart.</li>
+            <li>Add side-by-side comparison of two or more companies.</li>
+            <li>Deploy a public demo running on the sample data.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Fadhil Taariq</span>
+      <span><a href="../index.html#work">All projects →</a></span>
+    </div>
+  </footer>
+</body>
+</html>

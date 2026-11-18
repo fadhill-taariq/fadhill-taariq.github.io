@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Job Application Bot — Fadhil Taariq</title>
+  <meta name="description" content="A local, API-key-free job application assistant that uses Ollama LLMs to tailor CVs and cover letters." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..600;1,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Fadhil&nbsp;Taariq</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://github.com/fadhill-taariq" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="wrap">
+        <a class="back" href="../index.html#work">← Back to all projects</a>
+        <div class="meta">
+          <span class="pill">01 / 05</span>
+          <span>Python · Ollama · HTML</span>
+          <span>Local-first AI tool</span>
+        </div>
+        <h1>Job Application Bot</h1>
+        <p class="lede">
+          A local job-application assistant that never asks for an API key. Paste a job
+          description, point it at your CV, and the local language
+          model will draft a tailored CV, write a cover letter, export both to PDF, and
+          log the application. I wanted something that ran on my laptop, kept everything local, and
+          still gave me a meaningful head start on each application.
+        </p>
+        <div class="btn-row">
+          <a class="btn primary" href="https://github.com/fadhill-taariq/job-application-bot" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap project-body">
+        <aside>
+          <h4>Stack</h4>
+          <ul>
+            <li>Python</li>
+            <li>Ollama (local LLMs)</li>
+            <li>HTML / Jinja-style templates</li>
+            <li>PDF generation library</li>
+            <li>Lightweight local storage</li>
+          </ul>
+          <h4>Role</h4>
+          <ul>
+            <li>Sole developer</li>
+            <li>Design &amp; engineering</li>
+          </ul>
+          <h4>Status</h4>
+          <ul>
+            <li>Active side project</li>
+          </ul>
+        </aside>
+
+        <div class="content">
+
+          <h2>The build</h2>
+          <p>
+            The bot pairs a small interface for pasting a job description with a pipeline
+            that hands the text to a locally-running Ollama model. It produces a CV
+            re-ordered around the role, drafts a cover letter that mirrors the tone of
+            the listing, exports both to clean PDFs, and writes a row into a personal
+            tracker so I can see which roles I've applied to and when.
+          </p>
+
+          <h2>What I learned</h2>
+
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="label">LLM Engineering</div>
+              <div class="title">Working with local models</div>
+              <p>Running, configuring, and prompting Ollama models without depending on a hosted API.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Prompt Design</div>
+              <div class="title">Grounded prompting</div>
+              <p>Structuring prompts so a model rewrites real CV content instead of hallucinating biography.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Python</div>
+              <div class="title">Application architecture</div>
+              <p>Splitting input, model, templating, and output into clean, testable layers.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Documents</div>
+              <div class="title">PDF generation</div>
+              <p>Programmatically rendering formatted documents that look hand-typeset, not auto-generated.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">UX</div>
+              <div class="title">Small, calm interfaces</div>
+              <p>Designing a tool I'd actually want to open at 9pm on a Sunday — minimal, fast, never in the way.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Privacy</div>
+              <div class="title">Local-first thinking</div>
+              <p>Treating "your data never leaves your machine" as a feature, not a footnote.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Persistence</div>
+              <div class="title">Simple state storage</div>
+              <p>Tracking application history in a format that's still readable in five years.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Iteration</div>
+              <div class="title">Shipping for an audience of one</div>
+              <p>Letting my own use of the tool drive its features instead of pre-planning everything upfront.</p>
+            </div>
+          </div>
+
+          <h2>What I'd do next</h2>
+          <ul>
+            <li>Side-by-side diff of generic CV vs. tailored CV, so I can sanity-check changes before exporting.</li>
+            <li>A small evaluator that scores cover letters for tone consistency.</li>
+            <li>Optional plug-in for fetching job descriptions directly from a URL.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Fadhil Taariq</span>
+      <span><a href="../index.html#work">All projects →</a></span>
+    </div>
+  </footer>
+</body>
+</html>

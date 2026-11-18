@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Covid-19 Personalised Dashboard — Fadhil Taariq</title>
+  <meta name="description" content="A configurable dashboard pulling regional pandemic data into a single, personal view." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..600;1,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Fadhil&nbsp;Taariq</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://github.com/fadhill-taariq" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="wrap">
+        <a class="back" href="../index.html#work">← Back to all projects</a>
+        <div class="meta">
+          <span class="pill">05 / 05</span>
+          <span>Data · Scripting · Dashboards</span>
+          <span>Personal information tool</span>
+        </div>
+        <h1>Covid-19 Personalised Dashboard</h1>
+        <p class="lede">
+          A configurable dashboard that pulled together regional pandemic
+          numbers into a single, calm, personal view — I wanted a tiny,
+            opinionated dashboard that pulled just the numbers I cared about, in
+            roughly the order I cared about them, with as little decoration as
+            possible.
+        </p>
+        <div class="btn-row">
+          <a class="btn primary" href="https://github.com/fadhill-taariq/Covid-19-Personalised-Dashboard" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap project-body">
+        <aside>
+          <h4>Stack</h4>
+          <ul>
+            <li>Python &amp; Flask</li>
+            <li>Public health data feeds</li>
+            <li>HTML / dashboard rendering</li>
+          </ul>
+          <h4>Role</h4>
+          <ul>
+            <li>Sole developer</li>
+            <li>Design &amp; engineering</li>
+          </ul>
+          <h4>Status</h4>
+          <ul>
+            <li>Archived snapshot</li>
+          </ul>
+        </aside>
+
+        <div class="content">
+
+          <h2>The build</h2>
+          <p>
+            A scheduled script pulls case, hospitalisation, and vaccination figures
+            from public data sources, normalises the response shapes, and writes a
+            simple rendered view. The dashboard is configurable — point it at a
+            different region and it adjusts the comparison set automatically.
+          </p>
+
+          <h2>What I learned</h2>
+
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="label">Scripting</div>
+              <div class="title">Automating the boring parts</div>
+              <p>Using scripts to fetch, refresh, and reshape data on a schedule.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">APIs &amp; data</div>
+              <div class="title">Pulling from public sources</div>
+              <p>Working with messy, real-world data feeds and handling their inevitable inconsistencies.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Modelling</div>
+              <div class="title">Normalising shapes</div>
+              <p>Wrangling several incompatible APIs into one consistent internal data model.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Dashboards</div>
+              <div class="title">Information hierarchy</div>
+              <p>Choosing what's a headline number, what's context, and what's a footnote.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Configuration</div>
+              <div class="title">User-tunable defaults</div>
+              <p>Designing the dashboard so a single setting could change the comparison region.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Resilience</div>
+              <div class="title">Failing gracefully</div>
+              <p>Handling missing data and broken feeds without blanking the entire view.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Visual design</div>
+              <div class="title">Calm dashboards</div>
+              <p>Resisting the urge to add charts and colour until the underlying numbers were trustworthy.</p>
+            </div>
+            <div class="skill-card">
+              <div class="label">Civic-tech mindset</div>
+              <div class="title">Building for yourself first</div>
+              <p>Starting with the tool I wanted to use every morning, rather than a generic dashboard for nobody in particular.</p>
+            </div>
+          </div>
+
+          <h2>What I'd do next</h2>
+          <ul>
+            <li>Generalise the framework so it can show any time-series of regional health or environmental data.</li>
+            <li>Replace the rendered view with a small static site that updates from cached snapshots.</li>
+            <li>Add a "what changed today" summary written by a local language model.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Fadhil Taariq</span>
+      <span><a href="../index.html#work">All projects →</a></span>
+    </div>
+  </footer>
+</body>
+</html>
