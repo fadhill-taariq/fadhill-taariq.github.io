@@ -29,20 +29,24 @@
         <a class="back" href="../index.html#work">← Back to all projects</a>
         <div class="meta">
           <span class="pill">01 / 05</span>
-          <span>Python · Ollama · HTML</span>
+          <span>JavaScript · Ollama · HTML/CSS</span>
           <span>Local-first AI tool</span>
         </div>
         <h1>Job Application Bot</h1>
         <p class="lede">
-          A local job-application assistant that never asks for an API key. Paste a job
+          A local job-application assistant that never needs an AI API key. Paste a job
           description, point it at your CV, and the local language
           model will draft a tailored CV, write a cover letter, export both to PDF, and
           log the application. I wanted something that ran on my laptop, kept everything local, and
           still gave me a meaningful head start on each application.
         </p>
         <div class="btn-row">
-          <a class="btn primary" href="https://github.com/fadhill-taariq/job-application-bot" target="_blank" rel="noopener">View on GitHub ↗</a>
+          <a class="btn primary" href="https://fadhill-taariq.github.io/job-application-bot/" target="_blank" rel="noopener">Try it live ↗</a>
+          <a class="btn" href="https://github.com/fadhill-taariq/job-application-bot" target="_blank" rel="noopener">View on GitHub ↗</a>
         </div>
+        <p class="lede" style="font-size:0.9rem;margin-top:1rem;">
+          The live version runs in demo mode in your browser, with no install and no model. Run it locally with Ollama for real tailoring.
+        </p>
       </div>
     </section>
 
@@ -51,11 +55,13 @@
         <aside>
           <h4>Stack</h4>
           <ul>
-            <li>Python</li>
+            <li>JavaScript (no framework, no build step)</li>
             <li>Ollama (local LLMs)</li>
-            <li>HTML / Jinja-style templates</li>
-            <li>PDF generation library</li>
-            <li>Lightweight local storage</li>
+            <li>HTML / CSS</li>
+            <li>jsPDF for PDF export</li>
+            <li>pdf.js &amp; mammoth.js for CV import</li>
+            <li>JSearch API for live jobs</li>
+            <li>Browser localStorage</li>
           </ul>
           <h4>Role</h4>
           <ul>
@@ -78,6 +84,13 @@
             the listing, exports both to clean PDFs, and writes a row into a personal
             tracker so I can see which roles I've applied to and when.
           </p>
+          <p>
+            It has since grown into a fuller pipeline. A job scraper pulls live listings
+            from Google for Jobs and has the local model score each one against my
+            profile. A fact check flags any number or technology in the generated text
+            that isn't in my real CV, so a model "improvement" never reaches an
+            application. My profile can be imported straight from a PDF or Word CV.
+          </p>
 
           <h2>What I learned</h2>
 
@@ -93,9 +106,9 @@
               <p>Structuring prompts so a model rewrites real CV content instead of hallucinating biography.</p>
             </div>
             <div class="skill-card">
-              <div class="label">Python</div>
+              <div class="label">JavaScript</div>
               <div class="title">Application architecture</div>
-              <p>Splitting input, model, templating, and output into clean, testable layers.</p>
+              <p>Splitting the profile, generation, fact-checking, CV import and job search into separate modules, with no framework or build step.</p>
             </div>
             <div class="skill-card">
               <div class="label">Documents</div>
